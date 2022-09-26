@@ -24,7 +24,7 @@ Navigate to the project directory, and set up the environment variables again:
 source set_env.sh
 ```
 
-### Refactor the Backend API
+## Refactor the Backend API
 
 The current */project/udagram-api/* backend application code contains logic for both */users/*  and */feed/*  endpoints. Let's decompose the API code into the following two separate services that can be run independently of one another.
 
