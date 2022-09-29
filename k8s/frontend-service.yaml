@@ -7,4 +7,4 @@ spec:
     app: udagram-api-user
   ports:
   - port: 8100
-    targetPort: 8100
+    targetPort: 8080

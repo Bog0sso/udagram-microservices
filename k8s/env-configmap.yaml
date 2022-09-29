@@ -1,8 +1,7 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: udagram-microservice
-  namespace: default
+  name: env-config
 data:
     POSTGRES_HOST: udagram-database-1.cewvppg7oy29.us-east-1.rds.amazonaws.com
     POSTGRES_DB: postgres
