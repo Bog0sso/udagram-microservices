@@ -5,6 +5,10 @@ WORKDIR /usr/src/app
 # Un joker est utilisé pour s'assurer que le paquet.json ET le paquet-lock.json sont copiés lorsqu'ils sont disponibles (npm@5+)
 COPY package*.json ./
 # 
+#Install aws cli
+RUN apt-get update && apt-get install -y python python-dev python-pip python-setuptools \
+    && pip install awscli && apt-get clean
+
 # args
 ARG AWS_KEY=AKIAYNPU6JXNHEBAKFGU
 ARG AWS_SECRET=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
