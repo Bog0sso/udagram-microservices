@@ -15,13 +15,13 @@ spec:
       containers:
       - name: udagram-api-feed
         image: bog0sso/udagram-api-feed:v0
-        imagePullPolicy: Always       
+        imagePullPolicy: Always
         resources:
           requests:
-            memory: "256Mi"
+            memory: "2048Mi"
             cpu: "500m"
           limits:
-            memory: "1024Mi"
+            memory: "2048Mi"
             cpu: "500m"
         env:
         - name: URL
