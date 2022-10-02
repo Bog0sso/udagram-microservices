@@ -10,8 +10,8 @@ RUN apt-get update && apt-get install -y python python-dev python-pip python-set
     && pip install awscli && apt-get clean
 
 # args
-ARG AWS_KEY=AKIAYNPU6JXNHEBAKFGU
-ARG AWS_SECRET=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
+ARG AWS_KEY=AKIAWCEYEN3WOUK3LI6E
+ARG AWS_SECRET=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
 ARG AWS_REGION=us-east-2
 RUN aws configure set aws_access_key_id $AWS_KEY
 RUN aws configure set aws_secret_access_key $AWS_SECRET
