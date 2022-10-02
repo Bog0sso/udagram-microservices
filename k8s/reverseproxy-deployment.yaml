@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: reverseproxy
-        image: bog0sso/reverseproxy:v1
+        image: bog0sso/reverseproxy:v2
         imagePullPolicy: Always
         resources:
           limits:
