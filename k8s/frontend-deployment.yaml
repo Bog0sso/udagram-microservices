@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: udagram-frontend
-        image: bog0sso/udagram-frontend:v2
+        image: bog0sso/udagram-frontend:v3
         imagePullPolicy: Always
         resources:
           limits:
