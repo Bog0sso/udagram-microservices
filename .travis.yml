@@ -16,14 +16,14 @@ before_script:
 script:
   - docker --version # print the version for logging
   - docker-compose -f docker-compose-build.yaml build --parallel # build images
-  - docker tag udagram-api-feed $DOCKER_USERNAME/udagram-api-feed:v3  # feed-service image
-  - docker tag udagram-api-user $DOCKER_USERNAME/udagram-api-user:v3  # user-service image
-  - docker tag udagram-frontend $DOCKER_USERNAME/udagram-frontend:v3  # frontend-service image
-  - docker tag reverseproxy $DOCKER_USERNAME/reverseproxy:v3          # reverseproxy image
+  - docker tag udagram-api-feed $DOCKER_USERNAME/udagram-api-feed:v4  # feed-service image
+  - docker tag udagram-api-user $DOCKER_USERNAME/udagram-api-user:v4  # user-service image
+  - docker tag udagram-frontend $DOCKER_USERNAME/udagram-frontend:v4  # frontend-service image
+  - docker tag reverseproxy $DOCKER_USERNAME/reverseproxy:v4          # reverseproxy image
 
 after_success:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-  - docker push $DOCKER_USERNAME/udagram-api-feed:v3
-  - docker push $DOCKER_USERNAME/udagram-api-user:v3
-  - docker push $DOCKER_USERNAME/udagram-frontend:v3
-  - docker push $DOCKER_USERNAME/reverseproxy:v3
+  - docker push $DOCKER_USERNAME/udagram-api-feed:v4
+  - docker push $DOCKER_USERNAME/udagram-api-user:v4
+  - docker push $DOCKER_USERNAME/udagram-frontend:v4
+  - docker push $DOCKER_USERNAME/reverseproxy:v4
